@@ -1,6 +1,8 @@
 
 /* ===========================================
    RESET Y CONFIGURACIÓN BASE
+tribugus
+gustribuna@gmail.com
 =========================================== */
 html {
     width: 100%;
@@ -462,4 +464,62 @@ body {
 
 
 
+
+
+
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: 180px;
+    gap: 12px;
+    padding: 10px;
+}
+
+.gallery a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: #1a1a1a;
+    transition: all 0.3s ease;
+}
+
+.gallery a:nth-child(3n+1) { grid-row: span 1; }
+.gallery a:nth-child(3n+2) { grid-row: span 2; }
+.gallery a:nth-child(3n+3) { grid-row: span 1; }
+
+.gallery img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: block;
+}
+
+
+.gallery a:hover img {
+    transform: scale(1.1);
+}
+
+/* Efecto de brillo */
+.gallery a::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.08), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s;
+    z-index: 2;
+}
+
+.gallery a:hover::after {
+    left: 100%;
+}
 
