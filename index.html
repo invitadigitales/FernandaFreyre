@@ -127,6 +127,45 @@
 
 
 
+
+
+        <button id="btnQr" class="d-none"></button>
+        <div class="bg_red_true">
+            <center class="m_0a d_block max_wpx_700 color_black py_40">
+                <div class="px_20">
+                    <img src="tomaQr.png" class="w_100 max_wpx_150">
+                </div>
+                <button href="#" class="font_paris fspx_30 my_btn bg_white py_5 px_20 rounded color_black d_block w_100 my_20 text_shadow_dark no_link"
+                        data-bs-toggle="modal" data-bs-target="#PaseModaQR" id="btnQr">
+                    <i class="fa fa-camera-retro mr_10" aria-hidden="true"></i><span>Foto QR</span>
+                </button>
+            </center>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="PaseModaQR">
+          <div class="modal-dialog modal-lg">
+            <div class="text_right mb_15" style="pointer-events: auto;">
+                <button class="my_btn bg_red_true color_white rounded " data-bs-dismiss="modal" aria-label="Close">
+                    <i class="material-icons p_5">close</i>
+                </button>
+            </div>
+            <div class="modal-content bg_transparent">
+                <div class="rounded" id="map1">
+                    <div class="pase-xv">
+                        <video id="camara" style="width: 100%; height: auto;" autoplay playsinline></video>
+                        <div class="contenido-pase" id="watch_scaneo">
+                            <p class="mensaje-inv">Escanea el código QR para la foto.</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
         <div class="bgimg_patron bg_size_80 mb_30" >
             <center class="m_0a d_block max_wpx_700 color_black py_30">
                 <h3 class="font_paris fspx_40 m_0">Mis Fotos</h3>
