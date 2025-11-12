@@ -135,7 +135,7 @@
                 <div class="px_20">
                     <img src="tomaQr.png" class="w_100 max_wpx_150">
                 </div>
-                <button href="#" class="font_paris fspx_30 my_btn bg_white py_5 px_20 rounded color_black d_block w_100 my_20 text_shadow_dark no_link"
+                <button href="#" class="font_paris fspx_30 my_btn bg_olivo py_5 px_20 rounded color_white d_block w_100 my_20 text_shadow_dark no_link"
                         data-bs-toggle="modal" data-bs-target="#PaseModaQR" id="btnQr">
                     <i class="fa fa-camera-retro mr_10" aria-hidden="true"></i><span>Foto QR</span>
                 </button>
@@ -154,7 +154,7 @@
                     <div class="pase-xv">
                         <video id="camara" style="width: 100%; height: auto;" autoplay playsinline></video>
                         <div class="contenido-pase" id="watch_scaneo">
-                            <p class="mensaje-inv">Escanea el código QR para la foto.</p>
+                            <p class="text-center">Escanea el código QR para la foto.</p>
                         </div>
                     </div>  
                 </div>
@@ -383,6 +383,8 @@ const API_URL = 'https://www.ztart.mx/';
 const SUPABASE_URL = 'https://edgommnlktiidfbcvxhu.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVkZ29tbW5sa3RpaWRmYmN2eGh1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI3NDIwODcsImV4cCI6MjA3ODMxODA4N30.K5zdBMVCt65O-EEqEu-HKFdMIcUreJeE9YPWkYxCyog';
 const SUPABASE_BUCKET = "fotos1";
+const API = "https://www.ztart.mx/";
+const CLIENTE_ID = "12";
 
 
 
@@ -391,8 +393,6 @@ audio.loop = true;
 audio.volume = 0.5;
 
 
-const API = "https://www.ztart.mx/";
-const CLIENTE_ID = "12";
 
 
 var targetDate = new Date("Feb 28, 2026 08:00:00").getTime();
