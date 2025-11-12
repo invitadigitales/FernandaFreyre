@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="m_0 bg_red_true" style="overflow: auto;">
+<body class="m_0 bg_olivo" style="overflow: auto;">
 
 
 
@@ -100,10 +100,15 @@
 
 <script>
 
+
+
 const API_URL = 'https://www.ztart.mx/';
+const SUPABASE_URL = 'https://edgommnlktiidfbcvxhu.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVkZ29tbW5sa3RpaWRmYmN2eGh1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI3NDIwODcsImV4cCI6MjA3ODMxODA4N30.K5zdBMVCt65O-EEqEu-HKFdMIcUreJeE9YPWkYxCyog';
-const CLIENTE_ID = "8";
-const SUPABASE_BUCKET = "fotos1";
+const SUPABASE_BUCKET = "galery";
+const API = "https://www.ztart.mx/";
+const CLIENTE_ID = "12";
+
 
 const video = document.getElementById("camara");
 const canvas = document.getElementById("preview");
@@ -251,8 +256,9 @@ btnSubir.onclick = async () => {
         formData.append("cliente_id", CLIENTE_ID);
         formData.append("SUPABASE_BUCKET", SUPABASE_BUCKET);
         formData.append("SUPABASE_KEY", SUPABASE_KEY);
+        formData.append("SUPABASE_URL", SUPABASE_URL);
 
-        const res = await fetch(API_URL+"fotos", { method: "POST", body: formData });
+        const res = await fetch(API_URL+"fotosV2", { method: "POST", body: formData });
 
         console.log(res);
 

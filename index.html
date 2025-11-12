@@ -379,10 +379,13 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
+
+
+
 const API_URL = 'https://www.ztart.mx/';
 const SUPABASE_URL = 'https://edgommnlktiidfbcvxhu.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVkZ29tbW5sa3RpaWRmYmN2eGh1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI3NDIwODcsImV4cCI6MjA3ODMxODA4N30.K5zdBMVCt65O-EEqEu-HKFdMIcUreJeE9YPWkYxCyog';
-const SUPABASE_BUCKET = "fotos1";
+const SUPABASE_BUCKET = "galery";
 const API = "https://www.ztart.mx/";
 const CLIENTE_ID = "12";
 
@@ -821,7 +824,7 @@ const galleryInstance = lightGallery(gallery, {
 
 // Función para listar fotos
 function listarFotos() {
-    const url = `${API_URL}/fotos?cliente_id=${CLIENTE_ID}&SUPABASE_BUCKET=${SUPABASE_BUCKET}&SUPABASE_URL=${SUPABASE_URL}&SUPABASE_KEY=${SUPABASE_KEY}&r=${Math.random()}`;
+    const url = `${API_URL}/fotosV2?cliente_id=${CLIENTE_ID}&SUPABASE_BUCKET=${SUPABASE_BUCKET}&SUPABASE_URL=${SUPABASE_URL}&SUPABASE_KEY=${SUPABASE_KEY}&r=${Math.random()}`;
 
     fetch(url)
         .then(res => res.json())
@@ -916,7 +919,7 @@ gallery.addEventListener('lgAfterOpen', () => {
 // Función para eliminar foto
 function eliminarFoto(fotoUrl, container) {
     const fileName = fotoUrl.split('/').pop();
-    const deleteUrl = `${API_URL}/fotos?cliente_id=${CLIENTE_ID}&file_name=${fileName}&SUPABASE_BUCKET=${SUPABASE_BUCKET}&SUPABASE_URL=${SUPABASE_URL}&SUPABASE_KEY=${SUPABASE_KEY}`;
+    const deleteUrl = `${API_URL}/fotosV2?cliente_id=${CLIENTE_ID}&file_name=${fileName}&SUPABASE_BUCKET=${SUPABASE_BUCKET}&SUPABASE_URL=${SUPABASE_URL}&SUPABASE_KEY=${SUPABASE_KEY}`;
 
     fetch(deleteUrl, {
         method: 'DELETE',
